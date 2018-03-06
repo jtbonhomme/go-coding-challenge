@@ -105,3 +105,7 @@ Bonus point (those items are optional):
 ## Done ?
 
 Great job! When you're all finished, open a PR and we'll review it together 🙌
+
+## Thanks
+
+* http://numbersapi.com
