@@ -83,6 +83,7 @@ The aspects of your code we will assess include:
 * **Clarity**: does the documentation (result.md) clearly and concisely explains the problem and solution? Are technical tradeoffs explained ?
 * **Correctness**: does the code do what was asked ? If there is anything missing, does the result.md explain why it is missing?
 * **Code quality**: is the code simple, easy to understand, and maintainable ? Are there any code smells or other red flags ? Does it follows coding principles such as the single responsibility principle ? Is the coding style consistent with the language's guidelines ? Is it consistent throughout the codebase ?
+* **Usability**: is your API suitable to be used by many different clients, some with memory constraints, some with perfomance issues ? Can your API be used on different type of devices like web, mobile, or IoT ?
 * **Security**: are there any obvious vulnerability ?
 * **Testing**: how thorough are the automated tests ? Will they be difficult to change if the requirements of the application were to change ? Are there some unit or some integration tests ? We're not looking for full coverage (given time constraint) but just trying to get a feel for your testing skills.
 * **Technical choices**: do choices of libraries, databases, architecture etc. seem appropriate for the chosen application ?
