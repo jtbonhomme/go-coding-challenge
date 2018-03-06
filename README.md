@@ -23,7 +23,7 @@ Your mission is to implement a single endpoint that will be integrated in a larg
 ## The database
 
 The initial database is provided in a file [db.json](db.json).
-You are expected to integrate these data in any database you love, and explain how to install, launch and populate the database. This database **shall** be used by your code.
+You are expected to integrate the data in a mongodb local instance, and explain how to install, launch and populate the database. This database **must** be used by your code.
 The schema of the provided data is :
 
 ```
@@ -86,12 +86,13 @@ The aspects of your code we will assess include:
 * **Security**: are there any obvious vulnerability ?
 * **Testing**: how thorough are the automated tests ? Will they be difficult to change if the requirements of the application were to change ? Are there some unit or some integration tests ? We're not looking for full coverage (given time constraint) but just trying to get a feel for your testing skills.
 * **Technical choices**: do choices of libraries, databases, architecture etc. seem appropriate for the chosen application ?
-* **Documentation**: is your API well documented ? With a decent handling of http status code ? With curl examples ? Does it expose a swagger documentation ?
+* **Documentation**: is your API documented ? With a decent handling of http status code ? With curl examples ? Does it expose a modern documentation (swagger-like) ?
 
 Bonus point (those items are optional):
 
 * **Scalability**: will technical choices scale well ? If not, is there a discussion of those choices in the result.md ?
 * **Production-readiness**: does the code include monitoring ? logging ? proper error handling ?
+* **Authentication**: does the API allows user authentication ?
 
 ## Notes
 
