@@ -17,7 +17,7 @@ Your mission is to implement a single endpoint that will be integrated in a larg
 
 * the endpoint is exposed at `/api/v1/trivia`
 * the endpoint allows to fetch data from a local database (see explainations below)
-* the query may takes parameters, to filter the results
+* the query may takes parameters, to filter the results. You are expected to propose any kind of query params you may find useful to provide a rich user experience,
 * the endpoint returns a JSON response with an array of matching results
 
 ## The database
