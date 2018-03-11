@@ -36,3 +36,29 @@ func (m *NumObjectDAO) FindAll() ([]Numobject, error) {
 	err := db.C(COLLECTION).Find(bson.M{}).All(&numObject)
 	return numObject, err
 }
+
+//TODO FIND OBJECT BY NUMBER
+// Find Object by ID
+func (m *NumObjectDAO) FindByNumber(id string) (Numobject, error) {
+	var numObject Numobject
+	err := db.C(COLLECTION).FindId(bson.ObjectIdHex(id)).One(&numObject)
+	return numObject, err
+}
+
+// Add Object
+func (m *NumObjectDAO) Insert(numObject Numobject) error {
+	err := db.C(COLLECTION).Insert(&numObject)
+	return err
+}
+
+// Delete Object
+func (m *NumObjectDAO) Delete(numObject Numobject) error {
+	err := db.C(COLLECTION).Remove(&numObject)
+	return err
+}
+
+// Update existing Object
+func (m *NumObjectDAO) Update(numObject Numobject) error {
+	err := db.C(COLLECTION).UpdateId(numObject.ID, &numObject)
+	return err
+}
