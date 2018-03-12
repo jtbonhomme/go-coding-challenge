@@ -37,13 +37,19 @@ func (m *NumObjectDAO) FindAll() ([]Numobject, error) {
 	return numObject, err
 }
 
-//TODO FIND OBJECT BY NUMBER
 // Find Object by ID
-func (m *NumObjectDAO) FindByNumber(id string) (Numobject, error) {
+func (m *NumObjectDAO) FindById(id string) (Numobject, error) {
 	var numObject Numobject
 	err := db.C(COLLECTION).FindId(bson.ObjectIdHex(id)).One(&numObject)
 	return numObject, err
 }
+
+//TODO FIND OBJECT BY NUMBER
+// func (m *NumObjectDAO) FindByNumber(myNumber int) (Numobject, error) {
+// 	var numObject Numobject
+// 	err := db.C(COLLECTION).Find(bson.D{{"Number", myNumber}}).One(&numObject)
+// 	return numObject, err
+// }
 
 // Add Object
 func (m *NumObjectDAO) Insert(numObject Numobject) error {

@@ -31,7 +31,7 @@ func AllObjectsEndPoint(w http.ResponseWriter, r *http.Request) {
 // GET an Object by its ID
 func FindObjectEndpoint(w http.ResponseWriter, r *http.Request) {
 	params := mux.Vars(r)
-	numObject, err := dao.FindByNumber(params["number"])
+	numObject, err := dao.FindById(params["id"])
 	if err != nil {
 		respondWithError(w, http.StatusBadRequest, "Invalid Object ID")
 		return
@@ -114,7 +114,7 @@ func main() {
 	r.HandleFunc("/api/v1/trivia", AddObjectEndPoint).Methods("POST")
 	r.HandleFunc("/api/v1/trivia", DeleteObjectEndPoint).Methods("DELETE")
 	r.HandleFunc("/api/v1/trivia", UpdateObjectEndPoint).Methods("PUT")
-	r.HandleFunc("/api/v1/trivia/{number}", FindObjectEndpoint).Methods("GET")
+	r.HandleFunc("/api/v1/trivia/{id}", FindObjectEndpoint).Methods("GET")
 
 	if err := http.ListenAndServe(":3000", r); err != nil {
 		log.Fatal(err)
