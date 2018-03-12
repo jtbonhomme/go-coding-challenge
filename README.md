@@ -1,7 +1,7 @@
 # Go Programming Challenge
 
 Hello 👋
-This is our challenge for potential new developer team members.
+This is Intercloud's challenge for potential new engineering team members.
 
 ## Instructions
 
@@ -88,11 +88,11 @@ The aspects of your code we will assess include:
 * **Testing**: how thorough are the automated tests ? Will they be difficult to change if the requirements of the application were to change ? Are there some unit or some integration tests ? We're not looking for full coverage (given time constraint) but just trying to get a feel for your testing skills.
 * **Technical choices**: do choices of libraries, databases, architecture etc. seem appropriate for the chosen application ?
 * **Documentation**: is your API documented ? With a decent handling of http status code ? With curl examples ? Does it expose a modern documentation (swagger-like) ?
+* **Production-readiness**: does the code include monitoring ? logging ? proper error handling ?
 
 Bonus point (those items are optional):
 
 * **Scalability**: will technical choices scale well ? If not, is there a discussion of those choices in the result.md ?
-* **Production-readiness**: does the code include monitoring ? logging ? proper error handling ?
 * **Authentication**: does the API allows user authentication ?
 
 ## Notes
